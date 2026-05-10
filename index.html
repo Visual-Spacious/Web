@@ -200,7 +200,7 @@
   .hero-right .photo-grid .top {
     background:
       linear-gradient(to bottom, rgba(26,25,22,0.15) 0%, rgba(26,25,22,0.0) 40%),
-      url('https://images.unsplash.com/photo-1570129477492-45c003edd2be?w=900&q=80') center/cover;
+      url('pictures/photo10.jpg') center/cover;
   }
 
   .hero-right .photo-grid .bottom {
@@ -210,11 +210,11 @@
   }
 
   .hero-right .photo-grid .bottom .b1 {
-    background: url('https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=600&q=80') center/cover;
+    background: url('pictures/photo17.jpg') center/cover;
   }
 
   .hero-right .photo-grid .bottom .b2 {
-    background: url('https://images.unsplash.com/photo-1486325212027-8081e485255e?w=600&q=80') center/cover;
+    background: url('pictures/photo8.jpg') center/cover;
   }
 
   .hero-badge {
@@ -463,7 +463,7 @@
     border-radius: 16px;
     overflow: hidden;
     aspect-ratio: 4/3;
-    background: url('https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=800&q=80') center/cover;
+    background: url('pictures/photo9.jpg') center/cover;
   }
 
   .process-visual-overlay {
@@ -485,7 +485,7 @@
   .portfolio-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: 260px 260px;
+    grid-template-rows: auto;
     gap: 12px;
   }
 
@@ -495,6 +495,7 @@
     position: relative;
     background: var(--stone);
     cursor: pointer;
+    aspect-ratio: 4/3;
   }
 
   .portfolio-grid .item:first-child {
@@ -688,73 +689,7 @@
 
   .pricing-card.featured .pricing-btn:hover { background: #1e4433; }
 
-  /* ── TESTIMONIALS ── */
-  #testimonials { background: var(--ink); }
-
-  #testimonials .section-eyebrow { color: var(--accent-mid); }
-  #testimonials .section-title { color: var(--white); }
-
-  .testimonials-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1.5rem;
-    margin-top: 4rem;
-  }
-
-  .testimonial-card {
-    background: rgba(255,255,255,0.04);
-    border: 1px solid rgba(255,255,255,0.1);
-    border-radius: 16px;
-    padding: 2rem;
-  }
-
-  .testimonial-stars {
-    color: var(--gold);
-    font-size: 0.85rem;
-    letter-spacing: 2px;
-    margin-bottom: 1rem;
-  }
-
-  .testimonial-text {
-    font-size: 0.9375rem;
-    color: rgba(255,255,255,0.75);
-    line-height: 1.75;
-    font-weight: 300;
-    margin-bottom: 1.5rem;
-    font-style: italic;
-  }
-
-  .testimonial-author {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-  }
-
-  .author-avatar {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    background: var(--accent);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 0.875rem;
-    font-weight: 500;
-    color: var(--white);
-    flex-shrink: 0;
-  }
-
-  .author-name {
-    font-size: 0.875rem;
-    font-weight: 500;
-    color: var(--white);
-  }
-
-  .author-role {
-    font-size: 0.75rem;
-    color: rgba(255,255,255,0.45);
-  }
-
+ 
   /* ── CTA BANNER ── */
   #cta {
     background: var(--accent);
@@ -1239,38 +1174,164 @@
   </div>
 </section>
 
-<!-- PORTFOLIO -->
-<section id="portfolio">
-  <div class="portfolio-header">
-    <div>
-      <span class="section-eyebrow">Our Work</span>
-      <h2 class="section-title">Recent shoots</h2>
-    </div>
-    <a href="#contact" class="btn-ghost">See full portfolio</a>
-  </div>
-  <div class="portfolio-grid">
-    <div class="item">
-      <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1100&q=80" alt="Modern home exterior with pool" loading="lazy" />
-      <div class="item-overlay"><span>Drone + Matterport · West Vancouver</span></div>
-    </div>
-    <div class="item">
-      <img src="https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?w=600&q=80" alt="Luxury interior living room" loading="lazy" />
-      <div class="item-overlay"><span>Matterport · South Surrey</span></div>
-    </div>
-    <div class="item">
-      <img src="https://images.unsplash.com/photo-1582268611958-ebfd161ef9cf?w=600&q=80" alt="Aerial property view" loading="lazy" />
-      <div class="item-overlay"><span>Drone · Langley</span></div>
-    </div>
-    <div class="item">
-      <img src="https://images.unsplash.com/photo-1580587771525-78b9dba3b914?w=600&q=80" alt="Modern home exterior" loading="lazy" />
-      <div class="item-overlay"><span>Interior + Drone · Burnaby</span></div>
-    </div>
-    <div class="item">
-      <img src="https://images.unsplash.com/photo-1484154218962-a197022b5858?w=600&q=80" alt="Kitchen interior" loading="lazy" />
-      <div class="item-overlay"><span>Interior · White Rock</span></div>
-    </div>
+<!-- VIDEO -->
+<section id="video" style="background: var(--white); padding: 4rem 8%;">
+  <span class="section-eyebrow">Property Tour</span>
+  <h2 class="section-title">Video walkthrough</h2>
+  <div style="max-width: 720px; margin: 2rem auto 0;">
+    <video controls style="width:100%; border-radius:12px; display:block; box-shadow: 0 8px 32px rgba(0,0,0,0.12);">
+      <source src="video/video1.mp4" type="video/mp4">
+    </video>
   </div>
 </section>
+
+<!-- MATTERPORT -->
+<section id="matterport" style="background: var(--cream); padding: 4rem 8%;">
+  <span class="section-eyebrow">3D Tour</span>
+  <h2 class="section-title">Explore every room</h2>
+  <iframe
+    src="https://my.matterport.com/show/?m=ErghJcwQcHG"
+    width="100%"
+    height="540px"
+    allowfullscreen
+    style="border-radius:12px; margin-top:2rem; border:none; display:block;">
+  </iframe>
+</section>
+
+<!-- PHOTO CAROUSEL -->
+<section id="portfolio" style="background: var(--white); padding: 4rem 8%;">
+  <div style="margin-bottom: 2rem;">
+    <span class="section-eyebrow">Our Work</span>
+    <h2 class="section-title">Property photography</h2>
+  </div>
+
+  <div class="carousel-wrap">
+    <button class="carousel-btn prev" onclick="carouselMove(-1)">&#8592;</button>
+
+    <div class="carousel-stage">
+      <img id="carouselImg" src="pictures/photo3.jpg" alt="Property photo" />
+      <div class="carousel-counter" id="carouselCounter">3 / 22</div>
+    </div>
+
+    <button class="carousel-btn next" onclick="carouselMove(1)">&#8594;</button>
+  </div>
+
+  <!-- Dot indicators -->
+  <div class="carousel-dots" id="carouselDots"></div>
+</section>
+
+<style>
+  .carousel-wrap {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+
+  .carousel-stage {
+    flex: 1;
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+    background: var(--ink);
+    aspect-ratio: 16/9;
+  }
+
+  .carousel-stage img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: opacity 0.3s ease;
+  }
+
+  .carousel-counter {
+    position: absolute;
+    bottom: 14px;
+    right: 18px;
+    background: rgba(0,0,0,0.5);
+    color: #fff;
+    font-size: 13px;
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-family: 'DM Sans', sans-serif;
+  }
+
+  .carousel-btn {
+    background: var(--ink);
+    color: #fff;
+    border: none;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    font-size: 20px;
+    cursor: pointer;
+    flex-shrink: 0;
+    transition: background 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .carousel-btn:hover { background: var(--accent); }
+
+  .carousel-dots {
+    display: flex;
+    justify-content: center;
+    gap: 6px;
+    margin-top: 16px;
+    flex-wrap: wrap;
+  }
+
+  .carousel-dots span {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--stone);
+    cursor: pointer;
+    transition: background 0.2s;
+    display: inline-block;
+  }
+
+  .carousel-dots span.active { background: var(--accent); }
+</style>
+
+<script>
+  const carouselPhotos = Array.from({length: 20}, (_, i) => `pictures/photo${i+3}.jpg`);
+  let carouselIndex = 0;
+
+  const img = document.getElementById('carouselImg');
+  const counter = document.getElementById('carouselCounter');
+  const dotsEl = document.getElementById('carouselDots');
+
+  // Build dots
+  carouselPhotos.forEach((_, i) => {
+    const dot = document.createElement('span');
+    if (i === 0) dot.classList.add('active');
+    dot.onclick = () => carouselGo(i);
+    dotsEl.appendChild(dot);
+  });
+
+  function carouselGo(index) {
+    carouselIndex = (index + carouselPhotos.length) % carouselPhotos.length;
+    img.style.opacity = '0';
+    setTimeout(() => {
+      img.src = carouselPhotos[carouselIndex];
+      img.style.opacity = '1';
+      counter.textContent = `${carouselIndex + 1} / ${carouselPhotos.length}`;
+      document.querySelectorAll('.carousel-dots span').forEach((d, i) => {
+        d.classList.toggle('active', i === carouselIndex);
+      });
+    }, 150);
+  }
+
+  function carouselMove(dir) { carouselGo(carouselIndex + dir); }
+
+  // Keyboard arrow support
+  document.addEventListener('keydown', e => {
+    if (e.key === 'ArrowLeft') carouselMove(-1);
+    if (e.key === 'ArrowRight') carouselMove(1);
+  });
+</script>
 
 <!-- PRICING -->
 <section id="pricing">
@@ -1338,46 +1399,7 @@
   </div>
 </section>
 
-<!-- TESTIMONIALS -->
-<section id="testimonials">
-  <span class="section-eyebrow">Client Stories</span>
-  <h2 class="section-title">Trusted by agents<br>across the Lower Mainland</h2>
-  <div class="testimonials-grid">
-    <div class="testimonial-card">
-      <div class="testimonial-stars">★★★★★</div>
-      <p class="testimonial-text">"The Matterport tour alone generated three serious inquiries within the first weekend. The quality is consistently exceptional and the team is incredibly easy to work with."</p>
-      <div class="testimonial-author">
-        <div class="author-avatar">SR</div>
-        <div>
-          <div class="author-name">Sarah Rourke</div>
-          <div class="author-role">Realtor, RE/MAX City Realty</div>
-        </div>
-      </div>
-    </div>
-    <div class="testimonial-card">
-      <div class="testimonial-stars">★★★★★</div>
-      <p class="testimonial-text">"I've used a lot of photographers and no one delivers like VisualSpacious. The drone footage is cinematic-level and the turnaround is always on time. My go-to for every listing."</p>
-      <div class="testimonial-author">
-        <div class="author-avatar">JL</div>
-        <div>
-          <div class="author-name">James Liu</div>
-          <div class="author-role">Team Lead, Sutton Group</div>
-        </div>
-      </div>
-    </div>
-    <div class="testimonial-card">
-      <div class="testimonial-stars">★★★★★</div>
-      <p class="testimonial-text">"The complete package was genuinely worth every dollar. Our luxury listing sold in 6 days at asking price — the 3D tour and drone video made the difference."</p>
-      <div class="testimonial-author">
-        <div class="author-avatar">MH</div>
-        <div>
-          <div class="author-name">Michelle Hartley</div>
-          <div class="author-role">Broker, Engel & Völkers</div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+
 
 <!-- CTA BANNER -->
 <div id="cta">
