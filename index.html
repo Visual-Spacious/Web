@@ -1120,7 +1120,7 @@
   <div class="carousel-wrap">
     <button class="carousel-btn prev" onclick="carouselMove(-1)">&#8592;</button>
 
-    <div class="carousel-stage">
+    <div class="carousel-stage" onclick="openLightbox()" style="cursor:zoom-in;">
       <img id="carouselImg" src="photo3.jpg" alt="Property photo" />
       <div class="carousel-counter" id="carouselCounter">1 / 14</div>
     </div>
@@ -1242,8 +1242,28 @@
   document.addEventListener('keydown', e => {
     if (e.key === 'ArrowLeft') carouselMove(-1);
     if (e.key === 'ArrowRight') carouselMove(1);
+    if (e.key === 'Escape') closeLightbox();
   });
+
+  function openLightbox() {
+    document.getElementById('lightboxImg').src = carouselPhotos[carouselIndex];
+    document.getElementById('lightbox').style.display = 'flex';
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeLightbox() {
+    document.getElementById('lightbox').style.display = 'none';
+    document.body.style.overflow = '';
+  }
 </script>
+
+<!-- LIGHTBOX -->
+<div id="lightbox" onclick="closeLightbox()" style="display:none; position:fixed; inset:0; background:rgba(0,0,0,0.92); z-index:9999; align-items:center; justify-content:center;">
+  <button onclick="closeLightbox()" style="position:fixed; top:20px; right:24px; background:rgba(255,255,255,0.15); border:none; color:#fff; font-size:20px; width:40px; height:40px; border-radius:50%; cursor:pointer;">✕</button>
+  <button onclick="event.stopPropagation(); carouselMove(-1); document.getElementById('lightboxImg').src=carouselPhotos[carouselIndex];" style="position:fixed; left:20px; top:50%; transform:translateY(-50%); background:rgba(255,255,255,0.15); border:none; color:#fff; font-size:24px; width:48px; height:48px; border-radius:50%; cursor:pointer;">&#8592;</button>
+  <img id="lightboxImg" src="" alt="Property photo" onclick="event.stopPropagation()" style="max-width:90vw; max-height:90vh; object-fit:contain; border-radius:6px;" />
+  <button onclick="event.stopPropagation(); carouselMove(1); document.getElementById('lightboxImg').src=carouselPhotos[carouselIndex];" style="position:fixed; right:20px; top:50%; transform:translateY(-50%); background:rgba(255,255,255,0.15); border:none; color:#fff; font-size:24px; width:48px; height:48px; border-radius:50%; cursor:pointer;">&#8594;</button>
+</div>
 
 <!-- PRICING -->
 <section id="pricing">
